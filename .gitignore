@@ -5,6 +5,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Private files
+todo.txt
+wiki.txt
+
 # Runtime data
 pids
 *.pid
