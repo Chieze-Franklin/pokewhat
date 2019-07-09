@@ -1,23 +1,9 @@
 /* eslint-disable no-undef */
 
-test('get pokemon with name ...', () => {
-  const pokemon = {
-    abilities: [{
-      ability: {
-        name: 'imposter',
-        url: 'https://pokeapi.co/api/v2/ability/150/',
-      },
-      is_hidden: true,
-      slot: 3,
-    }],
-    moves: [{
-      move: {
-        name: 'transform',
-        url: 'https://pokeapi.co/api/v2/move/144/',
-      },
-    }],
-    name: 'ditto',
-  };
+import { getPokemon } from '../../src/pokemon';
+
+test('get pokemon with name ...', async () => {
+  const pokemon = await getPokemon('ditto');
   expect(pokemon).toEqual({
     abilities: [{
       ability: {
@@ -37,7 +23,7 @@ test('get pokemon with name ...', () => {
   });
 });
 
-test('get pokemons with names ...', () => {
+test('get pokemons with names ...', async () => {
   const pokemons = [{
     abilities: [{
       ability: {
