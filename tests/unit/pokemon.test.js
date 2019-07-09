@@ -9,9 +9,9 @@ test('gets pokemon with by ditto', async () => {
 });
 
 test('gets pokemons by names sorted by moves in desc order', async () => {
-  const pokemons = await getPokemons(
-    ['bulbasaur', 'ivysaur', 'venusaur', 'charmander'],
-  );
+  const pokemons = await getPokemons([
+    'bulbasaur', 'ivysaur', 'venusaur', 'charmander',
+  ]);
   // charmander: 93 moves
   // bulbasaur: 78 moves
   // venusaur: 77 moves
