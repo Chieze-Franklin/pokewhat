@@ -12,13 +12,15 @@
     "build": "npm run remove-build && npm run build:server",
     "build:server": "./node_modules/.bin/babel -d ./build ./src -s --copy-files",
     "build-and-start": "npm run build && npm start",
+    "codecov": "",
+    "coveralls": "",
     "eslint": "./node_modules/.bin/eslint src",
     "eslint-fix": "./node_modules/.bin/eslint --fix src",
     "heroku-postbuild": "npm run build",
     "remove-build": "./node_modules/.bin/rimraf ./build",
     "start": "NODE_ENV=production ./node_modules/.bin/forever -m 5 ./build/server.js",
     "start:dev": "NODE_ENV=development nodemon --exec npm run babel-node",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "husky": {
     "hooks": {
