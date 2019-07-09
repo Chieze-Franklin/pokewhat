@@ -1,62 +1,24 @@
 /* eslint-disable no-undef */
 
-import { getPokemon } from '../../src/pokemon';
+import ditto from '../mocks/ditto.json';
+import { getPokemon, getPokemons } from '../../src/pokemon';
 
-test('get pokemon with name ...', async () => {
+test('gets pokemon with by ditto', async () => {
   const pokemon = await getPokemon('ditto');
-  expect(pokemon).toEqual({
-    abilities: [{
-      ability: {
-        name: 'imposter',
-        url: 'https://pokeapi.co/api/v2/ability/150/',
-      },
-      is_hidden: true,
-      slot: 3,
-    }],
-    moves: [{
-      move: {
-        name: 'transform',
-        url: 'https://pokeapi.co/api/v2/move/144/',
-      },
-    }],
-    name: 'ditto',
-  });
+  expect(pokemon).toEqual(ditto);
 });
 
-test('get pokemons with names ...', async () => {
-  const pokemons = [{
-    abilities: [{
-      ability: {
-        name: 'imposter',
-        url: 'https://pokeapi.co/api/v2/ability/150/',
-      },
-      is_hidden: true,
-      slot: 3,
-    }],
-    moves: [{
-      move: {
-        name: 'transform',
-        url: 'https://pokeapi.co/api/v2/move/144/',
-      },
-    }],
-    name: 'ditto',
-  },
-  ];
-  expect(pokemons).toContainEqual({
-    abilities: [{
-      ability: {
-        name: 'imposter',
-        url: 'https://pokeapi.co/api/v2/ability/150/',
-      },
-      is_hidden: true,
-      slot: 3,
-    }],
-    moves: [{
-      move: {
-        name: 'transform',
-        url: 'https://pokeapi.co/api/v2/move/144/',
-      },
-    }],
-    name: 'ditto',
-  });
+test('gets pokemons by names sorted by moves in desc order', async () => {
+  const pokemons = await getPokemons(
+    ['bulbasaur', 'ivysaur', 'venusaur', 'charmander'],
+  );
+  // charmander: 93 moves
+  // bulbasaur: 78 moves
+  // venusaur: 77 moves
+  // ivysaur: 66 moves
+  expect(pokemons.length).toBe(4);
+  expect(pokemons[0].name).toBe('charmander');
+  expect(pokemons[1].name).toBe('bulbasaur');
+  expect(pokemons[2].name).toBe('venusaur');
+  expect(pokemons[3].name).toBe('ivysaur');
 });
