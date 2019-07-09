@@ -40,10 +40,12 @@
             ]
         },
         "Branch Name": {
-            "script": "/^((ft-)|(ch-)|(bg-))[a-z0-9\\-]+$/.test(branch.name)",
+            "script": "/^[0-9\\-]+((ft-)|(ch-)|(bg-))[a-z0-9\\-]+$/.test(branch.name)",
             "message": [
                 "Branches created should be named using the following format:",
-                "{story type}-{2-3 word summary}",
+                "{pivotal tracker id}-{story type}-{2-3 word summary}",
+                "",
+                "{pivotal tracker id} - The ID of a story or epic",
                 "",
                 "{story type} - Indicates the context of the branch and should be one of:",
                 "    * bg = Bug",
@@ -53,7 +55,7 @@
                 "{2-3 word summary} - Short 2-3 words summary about what the branch contains",
                 "    This can contain digits, lowercase alphabets, dash.",
                 "",
-                "Example: ft-resources-rest-endpoints"
+                "Example: 4362872-ft-resources-rest-endpoints"
             ]
         },
         "Commit Message": {
