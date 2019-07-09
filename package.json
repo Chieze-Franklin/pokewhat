@@ -20,7 +20,7 @@
     "remove-build": "./node_modules/.bin/rimraf ./build",
     "start": "NODE_ENV=production ./node_modules/.bin/forever -m 5 ./build/server.js",
     "start:dev": "NODE_ENV=development nodemon --exec npm run babel-node",
-    "test": "jest --coverage"
+    "test": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "husky": {
     "hooks": {
@@ -59,6 +59,7 @@
     "@babel/preset-env": "^7.5.4",
     "babel-jest": "^24.8.0",
     "babel-preset-env": "^1.7.0",
+    "coveralls": "^3.0.4",
     "eslint": "^5.3.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.0",
