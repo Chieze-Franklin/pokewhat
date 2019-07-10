@@ -1,4 +1,5 @@
-import 'babel-polyfill' // eslint-disable-line
+import "@babel/polyfill"; // eslint-disable-line
+
 import cors from 'cors';
 import Express from 'express';
 import bodyParser from 'body-parser';
