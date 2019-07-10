@@ -11,6 +11,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/top', async (req, res) => {
+  console.log('>>>>>>>>>>>>>>>>');
+  console.log(req.query);
   const sortedList = await getPokemons();
   res.status(200).send({ data: sortedList });
 });
