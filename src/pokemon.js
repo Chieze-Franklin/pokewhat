@@ -1,5 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 
+import "@babel/polyfill"; // eslint-disable-line
+
 import request from 'request-promise-native';
 
 export async function getPokemon(name) {
