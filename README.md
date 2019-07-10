@@ -72,6 +72,14 @@ This returns the strongest pokemon from the list of pokemons whose names were sp
 
 ![image](https://user-images.githubusercontent.com/6097630/60984079-fecc3980-a332-11e9-929d-3ece1f2932d5.png)
 
+#### sort pokemons by strength
+
+`GET: /rank?names={comma-separated-list}`
+
+This returns a list of pokemons sorted by strength.
+
+![image](https://user-images.githubusercontent.com/6097630/61004975-29cc8280-a35f-11e9-9378-ff14c0b31750.png)
+
 ----------
 
 ## Building Your Own Image
