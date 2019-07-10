@@ -1,5 +1,4 @@
-after_success: 
-  - npm run coveralls
+after_success:
   - codecov
 email: false
 env:
