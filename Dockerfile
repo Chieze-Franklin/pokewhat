@@ -12,7 +12,6 @@ RUN npm install
 
 RUN npm run build
 
-# uncomment the line(s) below to supply your environment variable(s)
 ENV PORT=3000
 
 CMD ["npm", "start"]
