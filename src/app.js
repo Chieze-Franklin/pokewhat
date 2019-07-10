@@ -11,8 +11,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/top', async (req, res) => {
-  const sortedList = await getPokemons();
-  res.status(200).send({ data: sortedList });
+  let { names } = req.query;
+  if (names) {
+    names = names.split(',');
+  } else {
+    names = [];
+  }
+  const sortedList = await getPokemons(names);
+  if (sortedList.length > 0) {
+    return res.status(200).send({ data: sortedList[0] });
+  }
+  return res.status(404).send({ error: 'No pokemon found' });
 });
 
 export default app;
