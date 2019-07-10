@@ -3,18 +3,22 @@
 import request from 'request-promise-native';
 
 export async function getPokemon(name) {
-  const response = await request({
-    url: `https://pokeapi.co/api/v2/pokemon/${name}`,
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    resolveWithFullResponse: true,
-  });
-  if (response.body) {
-    return JSON.parse(response.body);
+  try {
+    const response = await request({
+      url: `https://pokeapi.co/api/v2/pokemon/${name}`,
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      resolveWithFullResponse: true,
+    });
+    if (response.body) {
+      return JSON.parse(response.body);
+    }
+    return undefined;
+  } catch (e) {
+    return undefined;
   }
-  return undefined;
 }
 
 export async function getPokemons(names, sortBy = 'moves', sortOrder = 'desc') {
