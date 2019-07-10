@@ -1,12 +1,13 @@
 after_success: 
   - npm run coveralls
-  - npm run codecov
+  - codecov
 email: false
 env:
   global:
     - export NODE_ENV=test
 install:
   - npm install
+  - npm install -g codecov
 language: node_js
 node_js:
   - "10"
