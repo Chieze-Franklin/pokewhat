@@ -25,4 +25,15 @@ app.get('/top', async (req, res) => {
   return res.status(404).send({ error: 'No pokemon found' });
 });
 
+app.get('/rank', async (req, res) => {
+  let { names } = req.query;
+  if (names) {
+    names = names.split(',');
+  } else {
+    names = [];
+  }
+  const sortedList = await getPokemons(names);
+  return res.status(200).send({ data: sortedList });
+});
+
 export default app;
