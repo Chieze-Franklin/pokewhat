@@ -6,7 +6,7 @@ import { getPokemon, getPokemons } from '../../src/pokemon';
 test('gets pokemon with by ditto', async () => {
   const pokemon = await getPokemon('ditto');
   expect(pokemon).toEqual(ditto);
-});
+}, 30000);
 
 test('gets pokemons by names sorted by height in asc order', async () => {
   const pokemons = await getPokemons([
@@ -21,7 +21,7 @@ test('gets pokemons by names sorted by height in asc order', async () => {
   expect(pokemons[1].name).toBe('bulbasaur');
   expect(pokemons[2].name).toBe('ivysaur');
   expect(pokemons[3].name).toBe('venusaur');
-});
+}, 30000);
 
 test('gets pokemons by names sorted by height in desc order', async () => {
   const pokemons = await getPokemons([
@@ -32,7 +32,7 @@ test('gets pokemons by names sorted by height in desc order', async () => {
   expect(pokemons[1].name).toBe('ivysaur');
   expect(pokemons[2].name).toBe('bulbasaur');
   expect(pokemons[3].name).toBe('charmander');
-});
+}, 30000);
 
 test('gets pokemons by names sorted by moves in asc order', async () => {
   const pokemons = await getPokemons([
@@ -47,7 +47,7 @@ test('gets pokemons by names sorted by moves in asc order', async () => {
   expect(pokemons[1].name).toBe('venusaur');
   expect(pokemons[2].name).toBe('bulbasaur');
   expect(pokemons[3].name).toBe('charmander');
-});
+}, 30000);
 
 test('gets pokemons by names sorted by moves in desc order', async () => {
   const pokemons = await getPokemons([
@@ -58,4 +58,4 @@ test('gets pokemons by names sorted by moves in desc order', async () => {
   expect(pokemons[1].name).toBe('bulbasaur');
   expect(pokemons[2].name).toBe('venusaur');
   expect(pokemons[3].name).toBe('ivysaur');
-});
+}, 30000);
