@@ -6,7 +6,7 @@ Get relevant info about your favourite pokemons. This project is based on https:
 [![Coverage Status](https://coveralls.io/repos/github/Chieze-Franklin/pokewhat/badge.svg?branch=master)](https://coveralls.io/github/Chieze-Franklin/pokewhat?branch=master)
 [![codecov](https://codecov.io/gh/Chieze-Franklin/pokewhat/branch/master/graph/badge.svg)](https://codecov.io/gh/Chieze-Franklin/pokewhat)
 [![](https://img.shields.io/docker/pulls/franklinchieze/pokewhat.svg)](https://hub.docker.com/r/franklinchieze/pokewhat)
-[![](https://img.shields.io/badge/Protected_by-Hound-a873d1.svg)](https://houndci.com)
+[![](https://img.shields.io/badge/Protected_by-Hound-a873d1.svg)](https://houndci.com) [![Greenkeeper badge](https://badges.greenkeeper.io/Chieze-Franklin/pokewhat.svg)](https://greenkeeper.io/)
 
 ## Getting Started
 
