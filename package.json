@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/Chieze-Franklin/pokewhat#readme",
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
+    "@babel/polyfill": "^7.7.0",
     "babel-loader": "^8.0.4",
     "babel-preset-es2015": "^6.24.1",
     "body-parser": "^1.19.0",
