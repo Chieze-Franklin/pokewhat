@@ -69,7 +69,7 @@
     "eslint-plugin-import": "^2.18.0",
     "husky": "^3.0.0",
     "jest": "^24.8.0",
-    "nodemon": "^1.18.6",
+    "nodemon": "^2.0.0",
     "nyc": "^14.1.1",
     "superagent": "^5.1.0",
     "supertest": "^4.0.2"
